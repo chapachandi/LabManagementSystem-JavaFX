@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="root1" prefHeight="408.0" prefWidth="877.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SampleUnitFormController">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="10.0" prefHeight="505.0" prefWidth="863.0">
+         <children>
+            <TableView fx:id="tblSampleUnit" layoutX="-6.0" layoutY="14.0" prefHeight="419.0" prefWidth="863.0">
+               <columns>
+                  <TableColumn fx:id="clmUnitCode" prefWidth="67.0" text="Unit Code" />
+                  <TableColumn fx:id="clmSampleId" prefWidth="97.0" text="Sample Id" />
+                  <TableColumn fx:id="clmTestName" prefWidth="284.0" text="Test Name" />
+                  <TableColumn fx:id="clmDate" prefWidth="113.0" text="Date" />
+                  <TableColumn fx:id="clmTime" text="Time" />
+                  <TableColumn fx:id="clmPatientId" prefWidth="116.0" text="Patient Id" />
+                  <TableColumn fx:id="clmOparetorUnitTbl" prefWidth="105.0" text="Oparetor" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

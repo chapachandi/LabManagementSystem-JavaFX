@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="619.0" prefWidth="902.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReqestAccessFormController">
+   <children>
+      <Label layoutX="46.0" layoutY="5.0" prefHeight="38.0" prefWidth="282.0" text="Request Access " textFill="#7a18ab">
+         <font>
+            <Font name="Bell MT Bold" size="27.0" />
+         </font>
+      </Label>
+      <Separator layoutX="9.0" layoutY="39.0" prefHeight="8.0" prefWidth="884.0" />
+      <AnchorPane layoutX="28.0" layoutY="66.0" prefHeight="196.0" prefWidth="244.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="24.0" layoutY="114.0" prefHeight="25.0" prefWidth="66.0" text="Full Name">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="lblFullName" layoutX="25.0" layoutY="145.0" prefHeight="25.0" prefWidth="194.0" style="-fx-background-color: #F2F2F2;" textFill="#519cae">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font></Label>
+            <Label layoutX="25.0" layoutY="25.0" prefHeight="19.0" prefWidth="76.0" text="Request  Id" textFill="#5516c3">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblRequestId" alignment="CENTER" layoutX="113.0" layoutY="22.0" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #F2F2F2;" textFill="#434fee">
+               <font>
+                  <Font name="Arial Bold" size="21.0" />
+               </font></Label>
+            <ComboBox fx:id="cmbPatientId" layoutX="24.0" layoutY="82.0" onAction="#cmbPatientSelectOnAction" prefHeight="25.0" prefWidth="116.0" promptText="Patient Id" style="-fx-background-color: skyblue; -fx-background-insets: blue;" />
+            <Button layoutX="153.0" layoutY="83.0" mnemonicParsing="false" onAction="#btnNewPatientOnAction" prefHeight="23.0" prefWidth="66.0" style="-fx-background-color: #00AF00;" text="+ new" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="28.0" layoutY="303.0" prefHeight="300.0" prefWidth="560.0">
+         <children>
+            <TableView fx:id="tblRequestAccess" editable="true" layoutX="10.0" layoutY="3.0" prefHeight="293.0" prefWidth="547.0">
+               <columns>
+                  <TableColumn fx:id="clmRequestId" prefWidth="94.0" text="Request Id" />
+                  <TableColumn fx:id="clmTestName" prefWidth="170.0" text="Test Name" />
+                  <TableColumn fx:id="clmPrice" prefWidth="85.0" text="Price" />
+                  <TableColumn fx:id="clmTotal" prefWidth="109.0" text="Total" />
+                  <TableColumn fx:id="clmOpareter" prefWidth="90.0" text="Opareter" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Separator layoutX="9.0" layoutY="277.0" prefHeight="19.0" prefWidth="884.0" />
+      <AnchorPane layoutX="606.0" layoutY="308.0" prefHeight="300.0" prefWidth="279.0" style="-fx-background-color: White;">
+         <children>
+            <Label layoutX="14.0" layoutY="15.0" prefHeight="25.0" prefWidth="89.0" text="Sub Total" textFill="#4e13d7">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblSubtotal" alignment="CENTER_RIGHT" layoutX="126.0" layoutY="15.0" onDragDetected="#lblSubtotalOnAction" prefHeight="25.0" prefWidth="141.0" style="-fx-background-color: #F2F2F2;" textAlignment="RIGHT" textFill="#ff1212">
+               <font>
+                  <Font name="Arial Bold" size="23.0" />
+               </font></Label>
+            <Label layoutX="14.0" layoutY="55.0" prefHeight="25.0" prefWidth="89.0" text="Payment Type" textFill="#210a5b">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="102.0" prefHeight="25.0" prefWidth="89.0" text="Pay Amount" textFill="#153f99">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtPayAmount" alignment="CENTER_RIGHT" layoutX="126.0" layoutY="102.0" onAction="#txtPayAmountOnAction" prefHeight="25.0" prefWidth="141.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </TextField>
+            <ComboBox fx:id="cmbPaymentType" layoutX="126.0" layoutY="55.0" onAction="#cmbPaymentTypeOnAction" prefHeight="25.0" prefWidth="141.0" />
+            <Label layoutX="14.0" layoutY="152.0" prefHeight="25.0" prefWidth="89.0" text="Balance" textFill="#ab0b0b">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtBalanece" alignment="CENTER_RIGHT" layoutX="126.0" layoutY="152.0" prefHeight="25.0" prefWidth="141.0">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font></TextField>
+            <Separator layoutX="1.0" layoutY="215.0" prefHeight="8.0" prefWidth="279.0" />
+            <Button layoutX="158.0" layoutY="260.0" mnemonicParsing="false" onAction="#btnPayOnaction" prefHeight="26.0" prefWidth="109.0" style="-fx-background-color: #F70D1A;" text="Pay Now" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnPrintBill" layoutX="14.0" layoutY="261.0" mnemonicParsing="false" onAction="#btnPrintBillOnAction" prefHeight="25.0" prefWidth="127.0" style="-fx-background-color: #009432;" text="Print Bill" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="546.0" layoutY="66.0" prefHeight="196.0" prefWidth="342.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="14.0" layoutY="54.0" prefHeight="25.0" prefWidth="76.0" text="Test Name">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="lblTestName" layoutX="89.0" layoutY="54.0" prefHeight="25.0" prefWidth="235.0" style="-fx-background-color: #F2F2F2;" />
+            <Label layoutX="14.0" layoutY="91.0" prefHeight="25.0" prefWidth="66.0" text="Price">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="lblPrice" layoutX="89.0" layoutY="91.0" prefHeight="27.0" prefWidth="235.0" style="-fx-background-color: #F2F2F2;" textFill="#d74c9f">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <ComboBox fx:id="cmbTestCode" layoutX="91.0" layoutY="14.0" onAction="#cmbTestCodeOnAction" prefHeight="25.0" prefWidth="229.0" promptText="Test Code" style="-fx-background-color: skyblue;" />
+            <Button layoutX="225.0" layoutY="140.0" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="29.0" prefWidth="100.0" style="-fx-background-color: #0000FF;" text="Add" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="286.0" layoutY="64.0" prefHeight="200.0" prefWidth="244.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="15.0" layoutY="25.0" prefHeight="19.0" prefWidth="76.0" text="Unit Code" textFill="#5516c3">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblUnitCode" layoutX="100.0" layoutY="21.0" prefHeight="25.0" prefWidth="109.0" style="-fx-background-color: #F2F2F2;" textFill="#2542a1">
+               <font>
+                  <Font name="Arial Bold" size="21.0" />
+               </font></Label>
+            <Label layoutX="16.0" layoutY="120.0" prefHeight="25.0" prefWidth="100.0" text="Sample Type">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="lblSampleType" layoutX="15.0" layoutY="148.0" prefHeight="25.0" prefWidth="194.0" style="-fx-background-color: #F2F2F2;" textFill="#26adbf">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font></Label>
+            <ComboBox fx:id="cmbSampleId" layoutX="15.0" layoutY="84.0" onAction="#cmbSampleIdOnAction" prefHeight="29.0" prefWidth="194.0" promptText="Sample Id" style="-fx-background-color: skyblue;" />
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="29.0" fitWidth="54.0" layoutX="9.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/icons8-create-order-24%20(1).png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblDate" layoutX="663.0" layoutY="15.0" prefHeight="19.0" prefWidth="109.0" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="800.0" layoutY="17.0" prefHeight="20.0" prefWidth="76.0" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="619.0" prefWidth="904.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TestFormController">
+   <children>
+      <Label layoutX="51.0" layoutY="12.0" prefHeight="29.0" prefWidth="159.0" text="Test " textFill="#7a18ab">
+         <font>
+            <Font name="Bell MT Bold" size="27.0" />
+         </font>
+      </Label>
+      <Separator layoutX="10.0" layoutY="46.0" prefHeight="8.0" prefWidth="884.0" />
+      <AnchorPane layoutX="23.0" layoutY="59.0" prefHeight="319.0" prefWidth="391.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="8.0" layoutY="6.0" prefHeight="25.0" prefWidth="381.0" text="Add Test" textFill="#021a9e">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="48.0" prefHeight="19.0" prefWidth="91.0" text="Test Code " textFill="#5516c3">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtTestCode" layoutX="120.0" layoutY="45.0" onAction="#getDataOnAction" prefHeight="25.0" prefWidth="103.0">
+               <effect>
+                  <ColorAdjust />
+               </effect>
+            </TextField>
+            <TextField fx:id="txtTestName" layoutX="12.0" layoutY="107.0" prefHeight="25.0" prefWidth="368.0" />
+            <Label layoutX="14.0" layoutY="81.0" prefHeight="19.0" prefWidth="91.0" text="Test Name" textFill="#5516c3">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="141.0" prefHeight="19.0" prefWidth="91.0" text="Price" textFill="#5516c3">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtPrice" layoutX="15.0" layoutY="160.0" prefHeight="25.0" prefWidth="368.0" />
+            <Button layoutX="207.0" layoutY="267.0" mnemonicParsing="false" onAction="#btnUpdateTestOnAction" prefHeight="29.0" prefWidth="91.0" style="-fx-background-color: #FFB914;" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="305.0" layoutY="267.0" mnemonicParsing="false" onAction="#btnSaveTestOnAction" prefHeight="29.0" prefWidth="76.0" style="-fx-background-color: #00D700;" text="Save" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="244.0" layoutY="46.0" mnemonicParsing="false" onAction="#btnNewTestOnAction" prefHeight="23.0" prefWidth="135.0" style="-fx-background-color: blue;" text="+ New Test" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="13.0" layoutY="379.0" prefHeight="226.0" prefWidth="411.0" style="-fx-background-color: white;">
+         <children>
+            <TableView fx:id="tblTest" layoutX="10.0" layoutY="62.0" prefHeight="158.0" prefWidth="391.0">
+               <columns>
+                  <TableColumn fx:id="clmCode" prefWidth="76.0" text="Test Code" />
+                  <TableColumn fx:id="clmTestName" prefWidth="145.0" text="Test Name" />
+                  <TableColumn fx:id="clmPrice" prefWidth="95.0" text="Price" />
+                  <TableColumn fx:id="clmOpareter" prefWidth="71.0" text="Opareter" />
+               </columns>
+            </TableView>
+            <TextField fx:id="txtSearchCode" layoutX="102.0" layoutY="25.0" onAction="#txtSearchCodeOnAction" prefHeight="25.0" prefWidth="211.0" promptText="Search Test Code " />
+            <Label layoutX="10.0" layoutY="25.0" prefHeight="25.0" prefWidth="91.0" text="Test List" textFill="#021a9e">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Label>
+            <Button layoutX="325.0" layoutY="24.0" mnemonicParsing="false" onAction="#btnSearchOnAction" prefHeight="23.0" prefWidth="76.0" style="-fx-background-color: #00BFFF;" text="Search" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="438.0" layoutY="60.0" prefHeight="301.0" prefWidth="452.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="381.0" text="Add Test Types" textFill="#021a9e">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="101.0" prefHeight="19.0" prefWidth="91.0" text="Test Name" textFill="#5516c3">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTestName" layoutX="117.0" layoutY="98.0" prefHeight="25.0" prefWidth="309.0" style="-fx-background-color: #F2F2F2;" />
+            <Label layoutX="14.0" layoutY="64.0" prefHeight="19.0" prefWidth="91.0" text="Test Type Id" textFill="#5516c3">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtTypeId" layoutX="114.0" layoutY="61.0" onAction="#getDataTestTypeOnAction" prefHeight="25.0" prefWidth="150.0">
+               <effect>
+                  <ColorAdjust />
+               </effect>
+            </TextField>
+            <ComboBox fx:id="cmbTestCode" layoutX="274.0" layoutY="61.0" onAction="#cmbTestCodeOnAction" prefWidth="150.0" promptText="Test code" style="-fx-background-color: skyblue;" />
+            <TextField fx:id="txtTypeName" layoutX="10.0" layoutY="158.0" prefHeight="25.0" prefWidth="411.0" />
+            <Label layoutX="12.0" layoutY="132.0" prefHeight="19.0" prefWidth="115.0" text="Test Type Name" textFill="#5516c3">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="12.0" layoutY="192.0" prefHeight="19.0" prefWidth="115.0" text="Referanse Range" textFill="#5516c3">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtReferaceRange" layoutX="13.0" layoutY="221.0" prefHeight="25.0" prefWidth="411.0" />
+            <Button layoutX="243.0" layoutY="262.0" mnemonicParsing="false" onAction="#btnUpdateTestTypeOnAction" prefHeight="29.0" prefWidth="91.0" style="-fx-background-color: #FFB914;" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="343.0" layoutY="262.0" mnemonicParsing="false" onAction="#btnSaveTestTypeOnAction" prefHeight="29.0" prefWidth="83.0" style="-fx-background-color: #00D700;" text="Save" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="277.0" layoutY="15.0" mnemonicParsing="false" onAction="#btnNewTypeOnAction" prefHeight="23.0" prefWidth="145.0" style="-fx-background-color: blue;" text="+ New Type" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="443.0" layoutY="383.0" prefHeight="226.0" prefWidth="442.0" style="-fx-background-color: white;">
+         <children>
+            <TableView fx:id="tblTestType" layoutX="21.0" layoutY="62.0" prefHeight="150.0" prefWidth="400.0">
+               <columns>
+                  <TableColumn fx:id="clmTypeId" prefWidth="76.0" text="Type Id" />
+                  <TableColumn fx:id="clmTestCode" prefWidth="76.0" text="Type Code" />
+                  <TableColumn fx:id="clmTypeName" prefWidth="132.0" text="Type Name" />
+                  <TableColumn fx:id="clmRange" prefWidth="58.0" text="Range" />
+                  <TableColumn fx:id="clmOpareter1" prefWidth="58.0" text="Opareter" />
+               </columns>
+            </TableView>
+            <TextField fx:id="txtSearchId" layoutX="150.0" layoutY="14.0" onAction="#txtSearchOnAction" prefHeight="25.0" prefWidth="181.0" promptText="Search Test Id" />
+            <Label layoutX="10.0" layoutY="14.0" prefHeight="25.0" prefWidth="135.0" text="Test Type List" textFill="#021a9e">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Label>
+            <Button layoutX="345.0" layoutY="13.0" mnemonicParsing="false" onAction="#btnSearchIdOnAction" prefHeight="27.0" prefWidth="76.0" style="-fx-background-color: #00BFFF;" text="Search" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="29.0" fitWidth="38.0" layoutX="14.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/icons8-report-card-50%20(1).png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="424.0" layoutY="54.0" orientation="VERTICAL" prefHeight="556.0" prefWidth="13.0" />
+   </children>
+</AnchorPane>

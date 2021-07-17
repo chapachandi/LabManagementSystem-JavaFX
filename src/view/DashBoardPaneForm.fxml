@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="619.0" prefWidth="904.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardPaneFormController">
+   <children>
+      <AnchorPane layoutX="27.0" layoutY="38.0" prefHeight="103.0" prefWidth="287.0" style="-fx-background-color: #A1F5FF;">
+         <children>
+            <Label alignment="CENTER" layoutX="116.0" layoutY="14.0" prefHeight="49.0" prefWidth="170.0" text="Registered Patient" textFill="#070707">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblPatientCount" alignment="CENTER" layoutX="118.0" layoutY="52.0" prefHeight="35.0" prefWidth="170.0" text="0" textFill="#0a0a0a">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Label>
+            <AnchorPane prefHeight="103.0" prefWidth="117.0" style="-fx-background-color: #16C7AF;">
+               <children>
+                  <ImageView fitHeight="49.0" fitWidth="63.0" layoutX="34.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/icons8-user-group-30%20(2).png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+         </children></AnchorPane>
+      <AnchorPane layoutX="616.0" layoutY="38.0" prefHeight="103.0" prefWidth="253.0" style="-fx-background-color: #CAA1FF;">
+         <children>
+            <AnchorPane prefHeight="103.0" prefWidth="117.0" style="-fx-background-color: #AF16C7;">
+               <children>
+                  <ImageView fitHeight="46.0" fitWidth="49.0" layoutX="39.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/icons8-blood-sample-30%20(1).png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+            <Label alignment="CENTER" layoutX="116.0" layoutY="14.0" prefHeight="49.0" prefWidth="134.0" text="Collect Samples" textFill="#070707">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblSamplesCount" alignment="CENTER" layoutX="116.0" layoutY="52.0" prefHeight="35.0" prefWidth="134.0" text="0" textFill="#0a0a0a">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <AnchorPane layoutX="333.0" layoutY="38.0" prefHeight="96.0" prefWidth="264.0" style="-fx-background-color: #FCD3FF;">
+         <children>
+            <AnchorPane prefHeight="103.0" prefWidth="117.0" style="-fx-background-color: #FF66FF;">
+               <children>
+                  <ImageView fitHeight="46.0" fitWidth="49.0" layoutX="36.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/icons8-purchase-order-26.png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+            <Label alignment="CENTER" layoutX="118.0" layoutY="14.0" prefHeight="49.0" prefWidth="146.0" text="Request" textFill="#070707">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblRequestCount" alignment="CENTER" layoutX="118.0" layoutY="52.0" prefHeight="35.0" prefWidth="146.0" text="0" textFill="#0a0a0a">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <LineChart fx:id="lineChartPatient" layoutX="14.0" layoutY="196.0" onDragDetected="#lineChartOnAction" prefHeight="401.0" prefWidth="543.0" style="-fx-background-color: white;" title="Registered Patients ">
+        <xAxis>
+          <CategoryAxis label="Month" side="BOTTOM" fx:id="x" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="y" label="Patients" side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <PieChart fx:id="pieChart" layoutX="575.0" layoutY="196.0" prefHeight="311.0" prefWidth="308.0" style="-fx-background-color: white;" title="Test" />
+   </children>
+</AnchorPane>
