@@ -14,4 +14,11 @@
 ![p12](https://user-images.githubusercontent.com/73926739/126142891-de30f516-eab9-40ae-a9a0-1cdd261c7b3f.png)
 
 
+# Tech/framework used
+* JavaFX
+* MySQL
+
+# Architechtural Pattern
+* Layered Architechtural
+
 
