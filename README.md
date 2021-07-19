@@ -19,6 +19,6 @@
 * MySQL
 
 # Architechtural Pattern
-* Layered Architechtural
+* Layered Architechtur
 
 
